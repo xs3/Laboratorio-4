@@ -1,0 +1,54 @@
+#divTitulo{
+	width:100%; 
+	height:200px; 
+	background-color: steelblue; 
+	text-align:right;
+	font-family: monospace;
+	color: lime;
+}
+#divLista{
+	width:80%;  
+	background-color: dimgray; 
+	text-align:left;
+	font-family: monospace;
+	color: chartreuse;
+	margin: 0 auto;
+	border-radius: 3px;
+	padding-bottom: 30px;
+}
+#tablaPosts{
+	width:80%; 
+	background-color:steelblue;
+	border-radius: 2px;
+	border: solid 1px black;
+}
+#divCrearPost{
+	width:80%;
+	margin:0 auto;
+	color:#0aa0e0;
+}
+.inputText{
+	background-color: dimgray;
+	border-radius: 3px;
+	border: none;
+	resize: none;
+}
+
+.inputText:focus{
+	border: solid 1px darkcyan;
+	outline: none !important;
+}
+a{
+	color:white;
+	font-family: monospace;
+	text-decoration: none;
+}
+.button{
+	background-color: steelblue;
+	border-radius: 3px;
+	outline: none !important;
+	border:none;
+	width: 80px;
+	height: 25px;
+	font-family: monospace;
+}

@@ -1,0 +1,53 @@
+#contenedor{
+	padding-top: 100px;
+	width: 60%;
+	margin: 0 auto;
+}
+#titulo{
+	width:50%; 
+	height:30px; 
+	background-color: steelblue; 
+	text-align:left;
+	font-family: monospace;
+	color: lime;
+	align:left;
+	padding-left: 10px;
+}
+#post{
+	width:100%;  
+	background-color: dimgray; 
+	text-align:left;
+	font-family: monospace;
+	color: black;
+	margin: 0 auto;
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+#comentarios{
+	width:80%;  
+	background-color: violet; 
+	text-align:left;
+	font-family: monospace;
+	color: chartreuse;
+	border-radius: 3px;
+	padding-top: 10px;
+}
+#comentarioNuevo{
+	width:80%;
+	color:#0aa0e0;
+	background-color: red;
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-bottom: 30px;
+}
+.button{
+	background-color: steelblue;
+	border-radius: 3px;
+	outline: none !important;
+	border:none;
+	width: 80px;
+	height: 25px;
+	font-family: monospace;
+}

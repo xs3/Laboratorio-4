@@ -1,0 +1,38 @@
+Ejercicio Miniblog
+
+
+Base de datos
+-posts (post_id PK, titulo VARCHAR(50), texto TEXT, fecha_desde DATE)
+-comentarios (comentario_id, post_id, texto)
+
+
+1) admin.php
+En esta pantalla se listan los posts que existen. El listado de posts debe mostrar el id, el título y la fecha desde la que se ve la publicación online. Cada post tendrá un link para "borrar" y otro para "ver".
+
+Debajo de la lista hay un formulario para crear un post, ingresando título, texto y fecha de publicación en un input text, un textarea y un input date, respectivamente. La fecha de publicación indicada no puede ser anterior al día de hoy.
+
+-¿Cómo quedan guardados en la base los saltos de línea del texto? Buscar en el manual la función nl2br()
+
+
+
+2) post.php?id=
+Es el visor del post. Se muestra título y texto. Debajo se muestran los comentarios que tenga, ordenados por comentario_id DESC, para que salgan los últimos primero.
+ 
+Hay un formulario para escribir un comentario que se envía por POST. El nuevo comentario se agrega a los comentarios existentes y se vuelve al mismo lugar, en donde tiene que aparecer primero el comentario que acabamos de enviar. El comentario tiene máximo 200 caracteres.
+
+-¿Qué pasa si escribo etiquetas HTML en el comentario que envío? Buscar en el manual la función htmlentities()
+
+
+3) en post.php
+Debajo de los comentarios mostramos una lista de los últimos 4 post que vió el usuario (variables de sesión). La lista está compuesta de los títulos, como links a post.php, de manera que si se hace click en el título iremos a ver ese post. Tienen que aparecer en el orden inverso al que se visitaron (el último leído va primero).
+
+
+4) index.php
+Se ven los últimos 4 posts del blog. Mostramos título y las primeras 50 palabras del texto del post, con link a post.php para verlo completo.
+
+Hay un link a "posts anteriores" que me lleva a index.php?desde=4. Las filas 0, 1, 2 y 3 de la consulta anterior se corresponden con los resultados de la "primera página". La página siguiente mostrará los siguientes 4 y tendrá el mismo link a los "post anteriores" que irá a index.php?desde=8 y así. 
+
+Este paginador se arma con LIMIT de MySQL utilizando ese parámetro "desde" que estamos enviando por GET. Por ejemplo: LIMIT 0,4 quiere decir "obtener 4 filas a partir de la 0"; LIMIT 4,4 sería "obtener 4 filas a partir de la cuarta"; y así.
+
+-¿Cómo calculamos la cantidad de páginas totales, sabiendo cuántos posts tiene el blog y que mostraremos 4 de ellos por página?
+
